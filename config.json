@@ -1,6 +1,6 @@
 {
-  "pasta_origem": "E:/ConversaoUTM/csv",
-  "pasta_destino": "E:/ConversaoUTM/convertido",
-  "coluna_x": "",
-  "coluna_y": ""
+  "pasta_origem": "C:/Users/Carlos/Downloads/csvplinio",
+  "pasta_destino": "C:/Users/Carlos/Downloads/Convertido",
+  "coluna_x": "B",
+  "coluna_y": "D"
 }

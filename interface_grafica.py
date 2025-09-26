@@ -92,7 +92,7 @@ class InterfaceConversaoUTM:
                  font=('Arial', 8), foreground='gray').grid(row=1, column=0, columnspan=4, pady=(5, 0))
         
         # Exemplos comuns
-        ttk.Label(config_frame, text="Exemplos: B, D | A, C | E, F | X, Y (pula linha 0 automaticamente)", 
+        ttk.Label(config_frame, text="Exemplos: B, D | A, C | E, F | X, Y", 
                  font=('Arial', 8), foreground='blue').grid(row=2, column=0, columnspan=4, pady=(2, 0))
         
         # Seção 3: Pasta destino
@@ -217,8 +217,7 @@ class InterfaceConversaoUTM:
                 "Confirmar Conversão", 
                 f"Converter {len(arquivos_csv)} arquivos CSV?\n\n"
                 f"Coluna X: {self.coluna_x.get()} (Easting)\n"
-                f"Coluna Y: {self.coluna_y.get()} (Northing)\n"
-                f"Pula linha 0 (cabeçalho) automaticamente\n\n"
+                f"Coluna Y: {self.coluna_y.get()} (Northing)\n\n"
                 f"Arquivos serão salvos em: {self.pasta_destino.get()}"
             )
             
@@ -315,9 +314,6 @@ class InterfaceConversaoUTM:
             
             for i, row in df.iterrows():
                 try:
-                    # Pula a linha 0 (cabeçalho)
-                    if i == 0:
-                        continue
                     
                     # Usa índices das colunas
                     valor_x = str(row.iloc[idx_x]).replace(',', '.')
