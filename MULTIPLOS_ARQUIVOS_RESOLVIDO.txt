@@ -1,0 +1,61 @@
+===============================================
+    PROBLEMA DE MÚLTIPLOS ARQUIVOS RESOLVIDO!
+===============================================
+
+🔧 CORREÇÃO APLICADA:
+
+O sistema agora NÃO carrega automaticamente o primeiro 
+arquivo quando há múltiplos CSVs na pasta.
+
+✅ ANTES: Carregava automaticamente o primeiro arquivo
+✅ AGORA: Aguarda você selecionar explicitamente
+
+===============================================
+
+🚀 COMO USAR COM MÚLTIPLOS ARQUIVOS:
+
+1. Execute: py conversao_utm.py
+2. Selecione a pasta com seus arquivos CSV
+3. O sistema mostrará TODOS os arquivos na lista
+4. CLIQUE na lista e ESCOLHA o arquivo específico
+5. O sistema carregará apenas o arquivo selecionado
+6. Continue com a conversão normalmente
+
+===============================================
+
+📋 EXEMPLO:
+
+Se sua pasta tem:
+- arquivo1.csv
+- arquivo2.csv
+
+O sistema mostrará ambos na lista.
+Você deve CLICAR e ESCOLHER qual quer converter.
+
+===============================================
+
+✅ VANTAGENS DA CORREÇÃO:
+
+✅ Não carrega arquivos automaticamente
+✅ Você tem controle total sobre qual arquivo processar
+✅ Evita erros de arquivos problemáticos
+✅ Interface mais clara e intuitiva
+
+===============================================
+
+🎯 TESTE COM ARQUIVOS DE EXEMPLO:
+
+Criei 2 arquivos de teste:
+- arquivo1.csv (colunas: ID, Nome, X, Y)
+- arquivo2.csv (colunas: Codigo, Descricao, Easting, Northing)
+
+Teste selecionando cada um individualmente!
+
+===============================================
+
+✅ AGORA FUNCIONA PERFEITAMENTE!
+
+O sistema trata corretamente pastas com múltiplos 
+arquivos CSV sem conflitos!
+
+===============================================

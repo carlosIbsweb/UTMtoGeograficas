@@ -1,0 +1,72 @@
+===============================================
+    INTERFACE SIMPLIFICADA - PERFEITA! ✅
+===============================================
+
+🎯 AGORA É EXATAMENTE O QUE VOCÊ QUERIA:
+
+✅ Sem seleção de arquivo individual
+✅ Campos para digitar os nomes das colunas
+✅ Processa TODOS os arquivos automaticamente
+
+===============================================
+
+🚀 COMO USAR (SUPER SIMPLES):
+
+1. Execute: py conversao_utm.py
+
+2. Selecione a pasta com TODOS os seus arquivos CSV
+
+3. Digite os nomes das colunas:
+   - Coluna X (Easting): ex: "X", "Easting", "Este"
+   - Coluna Y (Northing): ex: "Y", "Northing", "Norte"
+
+4. Selecione a pasta de destino
+
+5. Clique em "Converter TODOS os Arquivos"
+
+PRONTO! 🎉
+
+===============================================
+
+📋 EXEMPLOS DE NOMES DE COLUNAS:
+
+Coluna X (Easting):
+- X
+- Easting  
+- Este
+- E
+- UTM_X
+- Coord_X
+- Longitude
+
+Coluna Y (Northing):
+- Y
+- Northing
+- Norte
+- N
+- UTM_Y
+- Coord_Y
+- Latitude
+
+===============================================
+
+✅ VANTAGENS DA NOVA INTERFACE:
+
+✅ Super simples - apenas 3 passos
+✅ Sem confusão - não precisa selecionar arquivos
+✅ Processa todos automaticamente
+✅ Você controla os nomes das colunas
+✅ Interface limpa e direta
+
+===============================================
+
+🎯 PERFEITO PARA SEU CASO:
+
+- Você tem vários arquivos CSV
+- Todos têm as mesmas colunas UTM
+- Quer processar todos de uma vez
+- Quer digitar os nomes das colunas
+
+AGORA ESTÁ EXATAMENTE COMO VOCÊ QUERIA! 🎉
+
+===============================================

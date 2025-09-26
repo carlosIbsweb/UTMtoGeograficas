@@ -1,0 +1,72 @@
+===============================================
+    CONVERSÃO EM LOTE IMPLEMENTADA! 🚀
+===============================================
+
+✅ NOVA FUNCIONALIDADE ADICIONADA:
+
+Agora você pode converter TODOS os arquivos CSV 
+de uma pasta de uma vez só!
+
+===============================================
+
+🎯 COMO USAR A CONVERSÃO EM LOTE:
+
+1. Execute: py conversao_utm.py
+2. Selecione a pasta com TODOS os seus arquivos CSV
+3. Escolha QUALQUER arquivo da lista (só para configurar)
+4. Selecione as colunas X e Y UTM
+5. Escolha a pasta de destino
+6. Clique em "Converter TODOS os Arquivos"
+
+===============================================
+
+📋 PROCESSO AUTOMÁTICO:
+
+✅ O sistema detecta TODOS os arquivos CSV da pasta
+✅ Aplica as mesmas colunas X e Y para todos
+✅ Converte cada arquivo individualmente
+✅ Salva com sufixo "_convertido"
+✅ Mostra relatório final com sucessos e erros
+
+===============================================
+
+🔧 EXEMPLO DE USO:
+
+Pasta origem contém:
+- arquivo1.csv
+- arquivo2.csv  
+- arquivo3.csv
+
+Resultado:
+- arquivo1_convertido.csv
+- arquivo2_convertido.csv
+- arquivo3_convertido.csv
+
+===============================================
+
+✅ VANTAGENS:
+
+✅ Processa centenas de arquivos automaticamente
+✅ Mesma configuração para todos (colunas X e Y)
+✅ Relatório detalhado de sucessos e erros
+✅ Continua processando mesmo se um arquivo falhar
+✅ Detecta codificação automaticamente para cada arquivo
+
+===============================================
+
+📊 RELATÓRIO FINAL:
+
+O sistema mostra:
+- Quantos arquivos foram convertidos com sucesso
+- Quantos tiveram erro
+- Lista dos arquivos processados
+- Detalhes dos erros no console
+
+===============================================
+
+🎉 PERFEITO PARA SEU CASO!
+
+Agora você pode processar todos os seus arquivos 
+CSV de uma vez, marcando as colunas uma única vez!
+
+===============================================
