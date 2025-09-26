@@ -1,131 +1,143 @@
-# Sistema de Conversão UTM para Coordenadas Geográficas
+# Conversor UTM para Coordenadas Geográficas
 
-Sistema em Python para converter coordenadas UTM para coordenadas geográficas no formato GG MM SS (graus, minutos, segundos).
+Sistema para converter coordenadas UTM para coordenadas geográficas no formato brasileiro (GG MM SS,SSS).
 
-**Configurado especificamente para:**
-- **Sistema:** SIRGAS 2000
-- **Zona UTM:** 23S (Hemisfério Sul)
-- **Meridiano Central:** -45°
+## 🎯 Características
 
-## 📋 Funcionalidades
+- **Sistema**: SIRGAS 2000 UTM Zone 23S
+- **Formato de saída**: `48 05 57,108 W` (graus, minutos, segundos com vírgula)
+- **Processamento em lote**: Converte todos os arquivos CSV de uma pasta
+- **Interface gráfica**: Fácil de usar
+- **Configuração por letras**: Usa letras de colunas (A, B, C, D...)
 
-- ✅ Interface gráfica intuitiva
-- ✅ Seleção de pasta com arquivos CSV
-- ✅ Prévia dos dados antes da conversão
-- ✅ Seleção manual das colunas UTM (X e Y)
-- ✅ Detecção automática de colunas (quando possível)
-- ✅ Conversão para formato DMS (GG° MM' SS.SS")
-- ✅ Também gera coordenadas decimais
-- ✅ Salva arquivos convertidos com sufixo "_convertido"
-- ✅ Instalação automática de dependências
+## 📋 Requisitos
 
-## 🚀 Como Usar
+- Python 3.7 ou superior
+- Windows (testado no Windows 10/11)
 
-### 1. Instalação
-```bash
-# Execute o instalador automático
-install.bat
+## 🚀 Instalação
+
+1. **Baixe o projeto** ou clone o repositório
+2. **Execute o instalador automático**:
+   ```bash
+   install.bat
+   ```
+   
+   O instalador irá:
+   - Verificar se Python está instalado
+   - Instalar automaticamente as dependências (pandas, pyproj)
+   - Mostrar mensagens de erro se necessário
+
+## 💻 Como Usar
+
+1. **Execute o programa**:
+   ```bash
+   py conversao_utm.py
+   ```
+
+2. **Configure a conversão**:
+   - **Pasta Origem**: Selecione a pasta com os arquivos CSV
+   - **Coluna X**: Digite a letra da coluna com coordenadas X (ex: B)
+   - **Coluna Y**: Digite a letra da coluna com coordenadas Y (ex: D)
+   - **Pasta Destino**: Selecione onde salvar os arquivos convertidos
+
+3. **Execute a conversão**:
+   - Clique em "Converter TODOS os Arquivos"
+   - Aguarde o processamento
+   - Os arquivos serão salvos com sufixo "_convertido"
+
+## 📊 Formato dos Arquivos
+
+### Entrada (UTM)
+```csv
+Vertice;E/Long;Sigma long;N/Lat;Sigma lat;h;Sigma h;...
+BSLL-M-B0945;168104,21;0,005;8239998,82;0,005;1168,08;0,018;...
 ```
 
-### 2. Executar o Sistema
-```bash
-# Inicie o programa
-python conversao_utm.py
+### Saída (Geográfico)
+```csv
+Vertice;E/Long;Sigma long;N/Lat;Sigma lat;h;Sigma h;...
+BSLL-M-B0945;48 05 57,108 W;0,005;15 53 49,155 S;0,005;1168,08;0,018;...
 ```
 
-### 3. Processo de Conversão
+## ⚙️ Configurações
 
-1. **Selecione a pasta** com seus arquivos CSV
-2. **Escolha o arquivo CSV** que deseja converter
-3. **Visualize a prévia** dos dados na tabela
-4. **Selecione as colunas**:
-   - Coluna X (Easting/Este)
-   - Coluna Y (Northing/Norte)
-5. **Escolha a pasta de destino** para salvar o arquivo convertido
-6. **Clique em "Converter Arquivo"**
+- **Sistema de coordenadas**: SIRGAS 2000 UTM Zone 23S
+- **Hemisfério**: Sul
+- **Meridiano central**: -45°
+- **Separador CSV**: Ponto e vírgula (;)
+- **Separador decimal**: Vírgula (,)
 
-## 📁 Estrutura dos Arquivos
+## 📁 Estrutura do Projeto
 
 ```
 ConversaoUTM/
-├── conversao_utm.py          # Arquivo principal (execute este)
-├── interface_grafica.py      # Interface gráfica
-├── conversor_utm.py          # Módulo de conversão
-├── requirements.txt          # Dependências Python
-├── install.bat              # Instalador automático
-└── README.md               # Este arquivo
+├── conversao_utm.py      # Arquivo principal
+├── interface_grafica.py  # Interface gráfica
+├── conversor_utm.py      # Lógica de conversão
+├── install.bat          # Instalador automático
+├── requirements.txt     # Dependências Python
+├── config.json         # Configurações salvas (ignorado pelo Git)
+└── README.md           # Este arquivo
 ```
 
-## 📊 Formato de Saída
+## 🔧 Funcionalidades
 
-O sistema adiciona as seguintes colunas ao arquivo original:
-
-- **Longitude_DMS**: Longitude em formato GG° MM' SS.SS"
-- **Latitude_DMS**: Latitude em formato GG° MM' SS.SS"
-- **Longitude_Decimal**: Longitude em graus decimais
-- **Latitude_Decimal**: Latitude em graus decimais
-
-### Exemplo:
-```
-Longitude_DMS: -45° 30' 25.67"
-Latitude_DMS: -23° 15' 42.89"
-```
-
-## 🔧 Dependências
-
-- **Python 3.7+**
-- **pandas**: Manipulação de dados CSV
-- **pyproj**: Conversões de coordenadas
-- **tkinter**: Interface gráfica (já vem com Python)
-
-## ⚙️ Configurações Técnicas
-
-- **Datum**: SIRGAS2000
-- **Elipsoide**: GRS80
-- **Zona UTM**: 23S
-- **Hemisfério**: Sul
-- **Meridiano Central**: -45°
+- ✅ Conversão em lote de múltiplos arquivos CSV
+- ✅ Interface gráfica intuitiva
+- ✅ Configuração por letras de colunas
+- ✅ Salva configurações automaticamente
+- ✅ Detecta automaticamente codificação e separador
+- ✅ Tratamento de erros robusto
+- ✅ Formato brasileiro de coordenadas
 
 ## 🐛 Solução de Problemas
 
-### Erro de Dependências
-```
-Execute: install.bat
-```
+### Erro: "Python não encontrado"
+- Instale Python em: https://www.python.org/downloads/
+- Certifique-se de marcar "Add Python to PATH" durante a instalação
 
-### Erro ao Abrir CSV
-- Verifique se o arquivo está em formato CSV válido
-- Certifique-se de que não há caracteres especiais no nome do arquivo
+### Erro: "Falha ao instalar dependências"
+- Execute como administrador
+- Verifique sua conexão com a internet
+- Tente executar: `py -m pip install --upgrade pip`
 
-### Coordenadas Incorretas
-- Verifique se as colunas X e Y estão corretas
-- Confirme se os dados estão em UTM Zone 23S
-- Verifique se os valores não têm caracteres não numéricos
+### Arquivo não carrega
+- Verifique se o arquivo está em formato CSV
+- Teste com diferentes codificações (UTF-8, Latin-1)
+- Verifique se o separador está correto (; ou ,)
 
-### Interface não Abre
-- Verifique se o Python está instalado
-- Execute `python --version` para confirmar
-- Reinstale as dependências com `install.bat`
+## 📝 Exemplos de Uso
 
-## 📝 Notas Importantes
+### Configuração típica:
+- **Coluna X**: B (E/Long)
+- **Coluna Y**: D (N/Lat)
+- **Pasta origem**: C:\Dados\UTM\
+- **Pasta destino**: C:\Dados\Convertido\
 
-1. **Zona UTM Fixa**: O sistema está configurado para Zone 23S. Para outras zonas, seria necessário modificar o código.
+### Resultado:
+- Arquivo original: `dados.csv`
+- Arquivo convertido: `dados_convertido.csv`
 
-2. **Formato dos Dados**: Os dados UTM devem estar em metros (padrão UTM).
+## 🤝 Contribuição
 
-3. **Encoding**: Os arquivos são salvos com encoding UTF-8 com BOM para compatibilidade com Excel.
+Para contribuir com o projeto:
+1. Faça um fork do repositório
+2. Crie uma branch para sua feature
+3. Faça commit das mudanças
+4. Abra um Pull Request
 
-4. **Backup**: O sistema não modifica o arquivo original, sempre cria um novo com sufixo "_convertido".
+## 📄 Licença
 
-## 🆘 Suporte
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-Se encontrar problemas:
+## 📞 Suporte
 
-1. Verifique se todas as dependências estão instaladas
-2. Confirme se o arquivo CSV está no formato correto
-3. Verifique se as colunas selecionadas contêm dados numéricos válidos
-4. Certifique-se de que tem permissões para escrever na pasta de destino
+Para dúvidas ou problemas:
+- Abra uma issue no repositório
+- Verifique a seção de solução de problemas
+- Consulte a documentação do pyproj e pandas
 
 ---
 
-**Desenvolvido para conversão de coordenadas UTM SIRGAS 2000 Zone 23S para coordenadas geográficas.**
+**Desenvolvido para conversão de coordenadas UTM para o sistema geográfico brasileiro.**
