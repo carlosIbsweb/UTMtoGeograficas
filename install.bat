@@ -27,6 +27,6 @@ if errorlevel 1 (
 echo.
 echo Instalacao concluida com sucesso!
 echo.
-echo Para executar o programa, use: py conversao_utm.py
+echo Para executar o programa, use: py executar_conversor.py
 echo.
 pause

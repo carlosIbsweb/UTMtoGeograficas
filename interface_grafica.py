@@ -244,7 +244,7 @@ class InterfaceConversaoUTM:
                     
                     # Salva o arquivo convertido
                     nome_sem_ext = arquivo_csv.stem
-                    arquivo_destino = Path(self.pasta_destino.get()) / f"{nome_sem_ext}_convertido.csv"
+                    arquivo_destino = Path(self.pasta_destino.get()) / f"{nome_sem_ext}.csv"
                     
                     df_convertido.to_csv(arquivo_destino, index=False, encoding='utf-8-sig', sep=';')
                     

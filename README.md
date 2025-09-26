@@ -32,7 +32,7 @@ Sistema para converter coordenadas UTM para coordenadas geográficas no formato 
 
 1. **Execute o programa**:
    ```bash
-   py conversao_utm.py
+   py executar_conversor.py
    ```
 
 2. **Configure a conversão**:
@@ -44,7 +44,7 @@ Sistema para converter coordenadas UTM para coordenadas geográficas no formato 
 3. **Execute a conversão**:
    - Clique em "Converter TODOS os Arquivos"
    - Aguarde o processamento
-   - Os arquivos serão salvos com sufixo "_convertido"
+   - Os arquivos serão salvos com o mesmo nome
 
 ## 📊 Formato dos Arquivos
 
@@ -72,7 +72,7 @@ BSLL-M-B0945;48 05 57,108 W;0,005;15 53 49,155 S;0,005;1168,08;0,018;...
 
 ```
 ConversaoUTM/
-├── conversao_utm.py      # Arquivo principal
+├── executar_conversor.py # Arquivo principal
 ├── interface_grafica.py  # Interface gráfica
 ├── conversor_utm.py      # Lógica de conversão
 ├── install.bat          # Instalador automático
@@ -117,7 +117,7 @@ ConversaoUTM/
 
 ### Resultado:
 - Arquivo original: `dados.csv`
-- Arquivo convertido: `dados_convertido.csv`
+- Arquivo convertido: `dados.csv` (mesmo nome)
 
 ## 🤝 Contribuição
 
